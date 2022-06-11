@@ -8,7 +8,7 @@ const formEvents = (uid) => {
     if (e.target.includes('submit-card')) {
       const vocabObj = {
         firebaseKey: '',
-        language: document.querySelector('select-lang').value,
+        language: document.querySelector('#select-lang').value,
         title: document.querySelector('#vocabTitle').value,
         description: document.querySelector('#description').value,
         uid,

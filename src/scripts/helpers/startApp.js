@@ -5,7 +5,7 @@ import domEvents from '../events/domEvents';
 import formEvents from '../events/formEvents';
 import navigationEvents from '../events/navigationEvents';
 import addVocabForm from '../components/form/addWord';
-import getWords from '../../api/wordsdata';
+import { getWords } from '../../api/wordsdata';
 import showVocab from '../components/pages/words';
 
 const startApp = (user) => {

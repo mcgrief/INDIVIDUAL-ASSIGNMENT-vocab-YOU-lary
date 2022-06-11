@@ -11,18 +11,18 @@ const navigationEvents = () => {
   document.querySelector('#all-lang').addEventListener('click', () => {
     getWords().then((wordArray) => showVocab(wordArray));
   });
+
+  document.querySelector('#html-tag').addEventListener('click', () => {
+    htmlFilter().then((htmlArray) => showVocab(htmlArray));
+  });
+
+  document.querySelector('#css-tag').addEventListener('click', () => {
+    cssFilter().then((cssArray) => showVocab(cssArray));
+  });
+
+  document.querySelector('#js-tag').addEventListener('click', () => {
+    javascriptFilter().then((jsArray) => showVocab(jsArray));
+  });
 };
-
-document.querySelector('#html-tag').addEventListener('click', () => {
-  htmlFilter().then((htmlArray) => showVocab(htmlArray));
-});
-
-document.querySelector('#css-tag').addEventListener('click', () => {
-  cssFilter().then((cssArray) => showVocab(cssArray));
-});
-
-document.querySelector('#js-tag').addEventListener('click', () => {
-  javascriptFilter().then((jsArray) => showVocab(jsArray));
-});
 
 export default navigationEvents;
