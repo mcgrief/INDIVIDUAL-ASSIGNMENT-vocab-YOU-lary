@@ -13,9 +13,11 @@ const showVocab = (array) => {
       <div class="card text-dark bg-light mb-3" style="max-width: 18rem;">
       <div class="card-word">${item.title}</div>
       <div class="card-body">
-        <h5 class="card-lang">${item.definition}</h5>
+        <h5 class="card-lang">${item.description}</h5>
         <hr><p class="card-def">${item.language}</p>
-        <hr><i id="delete-card-btn--${item.firebaseKey}" class="btn btn-dark fas fa-trash-alt"></i>
+        <hr>
+        <i id="edit-card-btn--${item.firebaseKey}" class="fas fa-edit btn btn-info"></i>
+        <i id="delete-card-btn--${item.firebaseKey}" class="btn btn-danger fas fa-trash-alt"></i>
       </div>
       `;
     });
