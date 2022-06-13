@@ -3,25 +3,33 @@ import {
 } from '../../api/wordsdata';
 import showVocab from '../components/pages/words';
 import signOut from '../helpers/auth/signOut';
+import addVocabForm from '../components/form/addWord';
 
-const navigationEvents = () => {
+const navigationEvents = (uid) => {
   document.querySelector('#logout-button')
     .addEventListener('click', signOut);
 
   document.querySelector('#all-lang').addEventListener('click', () => {
-    getWords().then((wordArray) => showVocab(wordArray));
+    getWords(uid).then((wordArray) => showVocab(wordArray));
   });
 
-  document.querySelector('#html-tag').addEventListener('click', () => {
-    htmlFilter().then((htmlArray) => showVocab(htmlArray));
+  document.querySelector('#html').addEventListener('click', () => {
+    htmlFilter(uid).then((htmlArray) => showVocab(htmlArray));
   });
 
-  document.querySelector('#css-tag').addEventListener('click', () => {
-    cssFilter().then((cssArray) => showVocab(cssArray));
+  document.querySelector('#css').addEventListener('click', () => {
+    cssFilter(uid).then((cssArray) => showVocab(cssArray));
   });
 
-  document.querySelector('#js-tag').addEventListener('click', () => {
-    javascriptFilter().then((jsArray) => showVocab(jsArray));
+  document.querySelector('#javascript').addEventListener('click', () => {
+    javascriptFilter(uid).then((jsArray) => showVocab(jsArray));
+  });
+
+  document.querySelector('#navigation').addEventListener('click', (e) => {
+    if (e.target.id.includes('addWord')) {
+      addVocabForm();
+      // console.warn('add a fucking form');
+    }
   });
 };
 

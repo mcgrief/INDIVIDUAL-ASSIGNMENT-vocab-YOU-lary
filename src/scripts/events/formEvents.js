@@ -2,13 +2,13 @@ import { createWords } from '../../api/wordsdata';
 import showVocab from '../components/pages/words';
 
 const formEvents = (uid) => {
-  document.querySelector('#main-container').addEventListener('submit', (e) => {
+  document.querySelector('#form-container').addEventListener('submit', (e) => {
     e.preventDefault();
 
-    if (e.target.includes('submit-card')) {
+    if (e.target.id.includes('submit-card')) {
       const vocabObj = {
-        firebaseKey: '',
-        language: document.querySelector('#select-lang').value,
+        //    firebaseKey: '',
+        language: document.querySelector('#vocabLang').value,
         title: document.querySelector('#vocabTitle').value,
         description: document.querySelector('#description').value,
         uid,

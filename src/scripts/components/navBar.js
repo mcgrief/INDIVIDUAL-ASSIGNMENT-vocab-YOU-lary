@@ -1,4 +1,4 @@
-import renderToDOM from '../helpers/renderToDom';
+import renderToDom from '../helpers/renderToDom';
 
 const navBar = () => {
   const domString = `  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark mb-5">
@@ -15,13 +15,16 @@ const navBar = () => {
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#" id="html-tag">HTML</a>
+            <a class="nav-link" href="#" id="html">HTML</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#" id="css-tag">CSS</a>
+            <a class="nav-link" href="#" id="css">CSS</a>
           </li>
           <li class="nav-item">
-          <a class="nav-link" href="#" id="js-tag">JavaScript</a>
+          <a class="nav-link" href="#" id="javascript">JavaScript</a>
+        </li>
+        <li class="nav-item">
+        <button type="button" class="btn btn-warning" id="addWord">Add a Word</button>
         </li>
         <nav class="navbar bg-dark">
   <div class="container-fluid">
@@ -38,7 +41,7 @@ const navBar = () => {
       </div>
       </div>
     </nav>`;
-  renderToDOM('#navigation', domString);
+  renderToDom('#navigation', domString);
 };
 
 export default navBar;
